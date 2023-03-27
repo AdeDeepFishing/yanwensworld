@@ -1,0 +1,258 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navigation bar styles */
+#navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ff91a9; /* Pink */
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 1rem;
+}
+
+#navbar a:hover {
+    color: #333;
+}
+
+#darkModeToggle {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+#darkModeToggle:hover {
+    background-color: #fff;
+    color: #ff91a9; /* Pink */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode #navbar {
+    background-color: #444;
+}
+
+/* Home page styles */
+#home {
+    display: flex;
+    height: 100vh;
+}
+
+.category {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+}
+
+/* .category img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+} */
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.category:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h2 {
+    color: #fff;
+    font-size: 2rem;
+}
+
+/* Add the background images for the Artworks and Coding Projects sections */
+#artworksCategory {
+    background-image: url('path/to/your/artworks-image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#codingCategory {
+    background-image: url('path/to/your/coding-image.jpg');
+    background-size: cover;
+    background-position: center
+}
+
+/* Artworks page styles */
+.projects-grid, .classes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+
+.project, .class {
+    aspect-ratio: 1/.618;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: #ffabbd; /* Pink */
+    color: #fff;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.project:hover, .class:hover {
+    background-color: #ff738d;
+}
+
+.class {
+    font-size: 24px; /* Adjust this value to the desired font size */
+}
+
+.section-title {
+    font-size: 36px; /* Adjust to your desired font size */
+    color: #4a4a4a; /* Choose a suitable color */
+    text-transform: uppercase; /* Makes the text uppercase */
+    letter-spacing: 1.5px; /* Increases the spacing between letters */
+    font-weight: 600; /* Makes the text a bit bolder */
+    margin-bottom: 20px; /* Adds some space below the heading */
+}
+
+/* You can also add a custom font by importing one from Google Fonts or another source. Here's an example using the "Roboto" font: */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
+
+.section-title {
+    font-family: 'Roboto', sans-serif; /* Set the custom font */
+    font-size: 36px; /* Adjust to your desired font size */
+    color: #4a4a4a; /* Choose a suitable color */
+    text-transform: uppercase; /* Makes the text uppercase */
+    letter-spacing: 1.5px; /* Increases the spacing between letters */
+    font-weight: 600; /* Makes the text a bit bolder */
+    margin-bottom: 20px; /* Adds some space below the heading */
+}
+
+.header-image {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-block {
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.info-block i {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #ff91a9; 
+}
+
+.info-block a {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: #ff91a9;
+}
+
+.info-block a:hover {
+    text-decoration: underline;
+    color: #fb6183; /* Change to a slightly lighter pink color on hover */
+}
+
+/* Dark Mode */
+body.dark-mode .info-block i,
+body.dark-mode .info-block a {
+    color: #ccc;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.footer-icons a {
+    color: #ff69b4;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+
+.footer-icons a:hover {
+    color: #ff8dc3;
+}
+
+body.dark-mode footer {
+    background-color: #222;
+}
+
+body.dark-mode .footer-icons a {
+    color: #ccc;
+}
+
+body.dark-mode .footer-icons a:hover {
+    color: #ddd;
+}
