@@ -1,4 +1,3 @@
-/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
@@ -48,7 +47,6 @@ body {
     color: #ff91a9; /* Pink */
 }
 
-/* Dark mode styles */
 body.dark-mode {
     background-color: #333;
     color: #fff;
@@ -59,6 +57,10 @@ body.dark-mode #navbar {
 }
 
 /* Home page styles */
+.page {
+    display: none;
+}
+
 #home {
     display: flex;
     height: 100vh;
@@ -66,19 +68,13 @@ body.dark-mode #navbar {
 
 .category {
     flex: 1;
+    width: 50%;
     position: relative;
     overflow: hidden;
     cursor: pointer;
     background-size: cover;
     background-position: center;
 }
-
-/* .category img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.3s ease;
-} */
 
 .overlay {
     position: absolute;
@@ -90,7 +86,7 @@ body.dark-mode #navbar {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.4);
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s ease;
 }
 
@@ -103,15 +99,14 @@ body.dark-mode #navbar {
     font-size: 2rem;
 }
 
-/* Add the background images for the Artworks and Coding Projects sections */
 #artworksCategory {
-    background-image: "homePageDrawingImage.png";
+    /* background-image: url("images/homePageDrawingImage.png"); */
     background-size: cover;
     background-position: center;
 }
 
 #codingCategory {
-    background-image: url('path/to/your/coding-image.jpg');
+    /* background-image: url("images/homePageCodingImage.png"); */
     background-size: cover;
     background-position: center
 }
@@ -162,8 +157,6 @@ body.dark-mode #navbar {
     margin-bottom: 20px; /* Adds some space below the heading */
 }
 
-/* You can also add a custom font by importing one from Google Fonts or another source. Here's an example using the "Roboto" font: */
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
 
 .section-title {
@@ -176,6 +169,41 @@ body.dark-mode #navbar {
     margin-bottom: 20px; /* Adds some space below the heading */
 }
 
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ff91a9;
+    color: #fff;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    max-width: 100px;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.header-text {
+    color: #fff;
+}
+
+.header-text h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.header-text p {
+    font-size: 1rem;
+}
+
+
 .header-image {
     text-align: center;
     margin-bottom: 2rem;
@@ -184,6 +212,20 @@ body.dark-mode #navbar {
 .header-image img {
     max-width: 100%;
     height: auto;
+}
+
+body.dark-mode #header {
+    background-color: #444;
+}header-right
+
+body.dark-mode . p {
+    color: #ccc;
+}
+
+.header-left img {
+    width: 150px; /* Adjust the logo width */
+    height: auto;
+    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
 }
 
 .contact-info {
@@ -223,7 +265,6 @@ body.dark-mode .info-block a {
     color: #ccc;
 }
 
-
 footer {
     position: fixed;
     bottom: 0;
@@ -256,3 +297,66 @@ body.dark-mode .footer-icons a {
 body.dark-mode .footer-icons a:hover {
     color: #ddd;
 }
+
+.homepage-image-container {
+    position: relative;
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.homepage-image-container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.home-page-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100vh - 80px); /* Adjust the height of the container as desired */
+    padding-top: 190px; /* This padding is to make space for the navbar */
+}
+
+.homepage-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.homepage-image-container {
+    position: relative;
+    width: calc(50% - 10px);
+}
+
+.homepage-image-container.left {
+    margin-right: 10px;
+}
+
+.homepage-image-container.right {
+    margin-left: 10px;
+}
+

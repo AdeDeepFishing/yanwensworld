@@ -10,28 +10,48 @@
     
 </head>
 <body>
+    <!-- Header -->
+    <header id="header">
+        <div class="header-left">
+            <img src="images/homePageLogo.png" alt="My Website Logo">
+        </div>
+        <div class="header-right">
+            <h1>Welcome to Yanwen's World! From Canvas to Code: A Journey of Imagination.</h1>
+        </div>
+    </header>
+
+    
     <!-- Navigation bar -->
     <nav id="navbar">
-        <a href="#">Home</a>
-        <a href="#artworks">Artworks</a>
-        <a href="#coding">Coding Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="javascript:void(0)" data-href="#home">Home</a>
+        <a href="javascript:void(0)" data-href="#artworks">Artworks</a>
+        <a href="javascript:void(0)" data-href="#coding">Coding Projects</a>
+        <a href="javascript:void(0)" data-href="#contact">Contact</a>
         <button id="darkModeToggle">Dark Mode</button>
     </nav>
     
+    
     <!-- Home page -->
-    <div id="home" class="page">
-        <div class="category" id="artworksCategory">
-            <div class="overlay">
-                <h2>Artworks</h2>
+    <div class="page" id="home">
+        <div class="page-content home-page-content">
+            <div class="homepage-image-container left">
+                <img src="images/homePageDrawingImage.png" alt="Artworks" class="homepage-image">
+                <div class="overlay">
+                    <div class="text">Artworks</div>
+                </div>
             </div>
-        </div>
-        <div class="category" id="codingCategory">
-            <div class="overlay">
-                <h2>Coding Projects</h2>
+            <div class="homepage-image-container right">
+                <img src="images/homePageCodingImage.png" alt="Codings" class="homepage-image">
+                <div class="overlay">
+                    <div class="text">Coding Projects</div>
+                </div>
             </div>
         </div>
     </div>
+    
+    
+
+
 
     <!-- Artworks page -->
     <div id="artworks" class="page">
@@ -59,7 +79,7 @@
         </div>
 
         <h1 class="section-title">Art Classes @ UCSB</h1>
-        <p>Yo! I am an art student from University of California, Santa Barbara, and here are some art classes I've taken and the relevant projects I've created.</p>
+        <p>Yo! Since I am an art student from University of California, Santa Barbara, here are some art classes I've taken and the relevant projects I've created in school.</p>
         <div class="classes-grid">
             <!-- Add art class names here -->
             <div class="class" data-page="art7a">Art 7A</div>
