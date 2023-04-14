@@ -16,7 +16,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #ff91a9; /* Pink */
+    background-color: #ff91a9;
     padding: 1rem;
     position: sticky;
     top: 0;
@@ -29,7 +29,7 @@ body {
     margin-right: 1rem;
 }
 
-#navbar a:hover {
+#navbar a:hover, #darkModeToggle:hover {
     color: #333;
 }
 
@@ -44,7 +44,7 @@ body {
 
 #darkModeToggle:hover {
     background-color: #fff;
-    color: #ff91a9; /* Pink */
+    color: #ff91a9;
 }
 
 body.dark-mode {
@@ -52,8 +52,25 @@ body.dark-mode {
     color: #fff;
 }
 
-body.dark-mode #navbar {
+body.dark-mode #navbar, body.dark-mode #header {
     background-color: #444;
+}
+
+body.dark-mode p {
+    color: #ccc;
+}
+
+body.dark-mode .info-block i,
+body.dark-mode .info-block a {
+    color: #ccc;
+}
+
+body.dark-mode .footer-icons a {
+    color: #ccc;
+}
+
+body.dark-mode .footer-icons a:hover {
+    color: #ddd;
 }
 
 /* Home page styles */
@@ -99,18 +116,6 @@ body.dark-mode #navbar {
     font-size: 2rem;
 }
 
-#artworksCategory {
-    /* background-image: url("images/homePageDrawingImage.png"); */
-    background-size: cover;
-    background-position: center;
-}
-
-#codingCategory {
-    /* background-image: url("images/homePageCodingImage.png"); */
-    background-size: cover;
-    background-position: center
-}
-
 /* Artworks page styles */
 .projects-grid, .classes-grid {
     display: grid;
@@ -127,7 +132,7 @@ body.dark-mode #navbar {
     border-radius: 5px;
     padding: 1rem;
     cursor: pointer;
-    background-color: #ffabbd; /* Pink */
+    background-color: #ffabbd;
     color: #fff;
     text-align: center;
     transition: background-color 0.3s ease;
@@ -145,29 +150,20 @@ body.dark-mode #navbar {
 }
 
 .class {
-    font-size: 24px; /* Adjust this value to the desired font size */
+    font-size: 24px;
 }
 
 .section-title {
-    font-size: 36px; /* Adjust to your desired font size */
-    color: #4a4a4a; /* Choose a suitable color */
-    text-transform: uppercase; /* Makes the text uppercase */
-    letter-spacing: 1.5px; /* Increases the spacing between letters */
-    font-weight: 600; /* Makes the text a bit bolder */
-    margin-bottom: 20px; /* Adds some space below the heading */
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    color: #4a4a4a;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
-
-.section-title {
-    font-family: 'Roboto', sans-serif; /* Set the custom font */
-    font-size: 36px; /* Adjust to your desired font size */
-    color: #4a4a4a; /* Choose a suitable color */
-    text-transform: uppercase; /* Makes the text uppercase */
-    letter-spacing: 1.5px; /* Increases the spacing between letters */
-    font-weight: 600; /* Makes the text a bit bolder */
-    margin-bottom: 20px; /* Adds some space below the heading */
-}
 
 /* Header styles */
 header {
@@ -192,6 +188,7 @@ header {
 
 .header-text {
     color: #fff;
+    
 }
 
 .header-text h1 {
@@ -203,7 +200,6 @@ header {
     font-size: 1rem;
 }
 
-
 .header-image {
     text-align: center;
     margin-bottom: 2rem;
@@ -212,20 +208,6 @@ header {
 .header-image img {
     max-width: 100%;
     height: auto;
-}
-
-body.dark-mode #header {
-    background-color: #444;
-}header-right
-
-body.dark-mode . p {
-    color: #ccc;
-}
-
-.header-left img {
-    width: 150px; /* Adjust the logo width */
-    height: auto;
-    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
 }
 
 .contact-info {
@@ -245,7 +227,7 @@ body.dark-mode . p {
 .info-block i {
     font-size: 2rem;
     margin-right: 1rem;
-    color: #ff91a9; 
+    color: #ff91a9;
 }
 
 .info-block a {
@@ -256,24 +238,28 @@ body.dark-mode . p {
 
 .info-block a:hover {
     text-decoration: underline;
-    color: #fb6183; /* Change to a slightly lighter pink color on hover */
+    color: #fb6183;
 }
 
-/* Dark Mode */
-body.dark-mode .info-block i,
-body.dark-mode .info-block a {
-    color: #ccc;
-}
-
-footer {
+.footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #ffffff;
+    background-color: #f8f9fa;
     display: flex;
-    justify-content: flex-end;
-    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    /* justify-content: flex-end; */
+    /* padding: 1rem; */
+    padding: 20px;
 }
+
+.footer-icons {
+    display: flex;
+    justify-content: flex-end; /* Align the icons to the right */
+    width: 100%; /* Add width to occupy the full width of the footer */
+}
+
 
 .footer-icons a {
     color: #ff69b4;
@@ -284,18 +270,6 @@ footer {
 
 .footer-icons a:hover {
     color: #ff8dc3;
-}
-
-body.dark-mode footer {
-    background-color: #222;
-}
-
-body.dark-mode .footer-icons a {
-    color: #ccc;
-}
-
-body.dark-mode .footer-icons a:hover {
-    color: #ddd;
 }
 
 .homepage-image-container {
@@ -336,8 +310,8 @@ body.dark-mode .footer-icons a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: calc(100vh - 80px); /* Adjust the height of the container as desired */
-    padding-top: 190px; /* This padding is to make space for the navbar */
+    height: calc(100vh - 80px);
+    padding-top: 190px;
 }
 
 .homepage-image {
@@ -360,3 +334,9 @@ body.dark-mode .footer-icons a:hover {
     margin-left: 10px;
 }
 
+.logo {
+    max-width: 100%;
+    height: auto;
+    /* Adjust the size of the logo by changing the max-width value */
+    max-width: 200px;
+}

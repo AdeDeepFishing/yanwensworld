@@ -7,28 +7,33 @@
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js"></script>
     <script src="https://kit.fontawesome.com/29e64996b1.js" crossorigin="anonymous"></script>
-    
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
 </head>
+
 <body>
     <!-- Header -->
     <header id="header">
         <div class="header-left">
-            <img src="images/homePageLogo.png" alt="My Website Logo">
+            <img src="images/homePageLogo.png" alt="My Website Logo" class="logo">
         </div>
         <div class="header-right">
-            <h1>Welcome to Yanwen's World! From Canvas to Code: A Journey of Imagination.</h1>
+            <h1 class="header-text">Welcome to Yanwen's World! </h1>
+            <h2 class="header-text">From Canvas to Code: A Journey of Imagination.</h2>
         </div>
     </header>
 
     
     <!-- Navigation bar -->
     <nav id="navbar">
-        <a href="javascript:void(0)" data-href="#home">Home</a>
-        <a href="javascript:void(0)" data-href="#artworks">Artworks</a>
-        <a href="javascript:void(0)" data-href="#coding">Coding Projects</a>
-        <a href="javascript:void(0)" data-href="#contact">Contact</a>
-        <button id="darkModeToggle">Dark Mode</button>
-    </nav>
+        <a href="#home" data-target="home" aria-label="Home">Home</a>
+        <a href="#about" data-target="about" aria-label="About">About</a>
+        <a href="#artworks" data-target="artworks" aria-label="Artworks">Artworks</a>
+        <a href="#coding" data-target="coding" aria-label="Coding">Coding</a>
+        <a href="#contact" data-target="contact" aria-label="Contact">Contact</a>
+        <button id="darkModeToggle" aria-label="Toggle Dark Mode">Dark Mode</button>
+      </nav>
+      
     
     
     <!-- Home page -->
@@ -49,8 +54,10 @@
         </div>
     </div>
     
-    
-
+    <!-- About page -->
+    <div id="about" class="page">
+        <!-- Add about page 1 details here -->
+    </div>
 
 
     <!-- Artworks page -->
@@ -90,81 +97,78 @@
             <div class="class" data-page="art22">Art 22</div>
             <div class="class" data-page="art32">Art 32</div>
             <div class="class" data-page="art132">Art 132</div>
-            <div class="class" data-page="art132">Art 137</div>
+            <div class="class" data-page="art185LJ">Art 185LJ</div>
         </div>
     </div>
 
     <!-- Artworks Projects' Details page -->
     <div id="project1" class="page">
-        <!-- Add project 1 details here -->
+        
     </div>
 
     <div id="project2" class="page">
-        <!-- Add project 2 details here -->
+        
     </div>
 
     <div id="project3" class="page">
-        <!-- Add project 3 details here -->
+        
     </div>
 
     <div id="project4" class="page">
-        <!-- Add project 4 details here -->
+        
     </div>
 
     <div id="project5" class="page">
-        <!-- Add project 5 details here -->
+        
     </div>
 
     <div id="project6" class="page">
-        <!-- Add project 6 details here -->
+        
     </div>
 
     <div id="art7a" class="page">
-        <!-- Add Art 7A content here -->
+        
     </div>
     
     <div id="art7b" class="page">
-        <!-- Add Art 7B content here -->
+        
     </div>
     
     <div id="art7c" class="page">
-        <!-- Add Art 7C content here -->
+        
     </div>
     
     <div id="art7d" class="page">
-        <!-- Add Art 7D content here -->
+        
     </div>
     
     <div id="art18" class="page">
-        <!-- Add Art 18 content here -->
+        
     </div>
     
     <div id="art22" class="page">
-        <!-- Add Art 22 content here -->
+        
     </div>
 
     <div id="art32" class="page">
-        <!-- Add Art 32 content here -->
+        
     </div>
     
     <div id="art132" class="page">
-        <!-- Add Art 132 content here -->
+        
     </div>
 
-    <div id="art137" class="page">
-        <!-- Add Art 137 content here -->
+    <div id="art185LJ" class="page">
+        
     </div>
 
     <!-- Coding page -->
     <div id="coding" class="page">
-        <!-- Add your coding page content here -->
+        
     </div>
 
     <!-- Contact page -->
     <div id="contact" class="page">
-        <!-- <div class="header-image">
-            <img src="path/to/your/cartoon-girl-image.jpg" alt="Cartoon Girl">
-        </div> -->
         <div class="contact-info">
             <div class="info-block">
                 <i class="fas fa-envelope"></i>
