@@ -168,9 +168,12 @@ body.dark-mode .footer-icons a:hover {
 /* Header styles */
 header {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem; */
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 30px;
     background-color: #ff91a9;
     color: #fff;
 }
@@ -188,7 +191,8 @@ header {
 
 .header-text {
     color: #fff;
-    
+    text-align: left;
+    margin-left: 20px;
 }
 
 .header-text h1 {
