@@ -8,6 +8,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #fff;
     color: #333;
+    font-size: 18px;
+    line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -151,16 +153,6 @@ body.dark-mode .footer-icons a:hover {
 
 .class {
     font-size: 24px;
-}
-
-.section-title {
-    font-family: 'Roboto', sans-serif;
-    font-size: 36px;
-    color: #4a4a4a;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: 600;
-    margin-bottom: 20px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
@@ -343,4 +335,41 @@ header {
     height: auto;
     /* Adjust the size of the logo by changing the max-width value */
     max-width: 200px;
+}
+
+/* about page */
+.about-container {
+    padding: 1rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+h1, h2 {
+    color: #ff91a9;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+.container {
+    max-width: 1200px; /* adjust this value to set the maximum width of your content */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px; /* add some padding to avoid content sticking to the edges */
+    padding-right: 20px;
 }
