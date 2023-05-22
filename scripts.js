@@ -68,6 +68,14 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+    //back button function
+    var backButtons=document.getElementsByClassName("back-button");
+    for(var i=0;i<backButtons.length;i++){
+        backButtons[i].onclick=function(){
+            window.history.back();
+        }
+    }
 });
 
 

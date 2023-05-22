@@ -120,8 +120,10 @@ body.dark-mode .footer-icons a:hover {
 
 /* Artworks page styles */
 .projects-grid, .classes-grid {
+    max-width: 100%;
+    height: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Default to 2 columns (400px min width) */
     grid-gap: 1rem;
     padding: 1rem;
 }
@@ -154,6 +156,48 @@ body.dark-mode .footer-icons a:hover {
 .class {
     font-size: 24px;
 }
+
+@media screen and (min-width: 1200px) { /* Adjust breakpoint as needed */
+    .classes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Switch to 3 columns (300px min width) */
+    }
+}
+
+.back-button-container {
+    display: flex;
+    justify-content: left;  
+    margin-bottom: 30px;  
+}
+
+.back-button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    background: linear-gradient(to right, #ff91a9 0%, #ff91a9 50%, #ff5e62 100%);
+}
+
+.back-button:hover {
+    background: linear-gradient(to right, #ff5e62 0%, #ff91a9 50%, #ff91a9 100%);
+    color: white;
+}
+
+body.dark-mode .back-button {
+    background: linear-gradient(to right, #414345 0%, #232526 100%);
+}
+
+body.dark-mode .back-button:hover {
+    background: linear-gradient(to right, #232526 0%, #414345 100%);
+    color: white;
+}
+
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
 
@@ -359,7 +403,7 @@ h2 {
     font-weight: 500;
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: #ff91a9;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     letter-spacing: 1px;
@@ -372,4 +416,26 @@ h1, h2 {
     margin-right: auto;
     padding-left: 20px; /* add some padding to avoid content sticking to the edges */
     padding-right: 20px;
+}
+
+/* artworks->classes or projects page */
+.artclasses-image-container{
+    width: calc(33.33% - 20px); /* Adjust this value to fit 3 or 4 images per line */
+    margin-bottom: 20px; /* Add some space below each image */
+    padding: 10px; /* Add some space around each image */
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.artclasses-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.artclasses-image-container p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px; /* Adjust font size as needed */
 }
