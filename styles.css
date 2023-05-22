@@ -421,6 +421,7 @@ h1, h2, h3 {
 /* artworks->classes or projects page */
 .artclasses-image-container{
     width: calc(33.33% - 20px); /* Adjust this value to fit 3 or 4 images per line */
+    margin:auto;
     margin-bottom: 20px; /* Add some space below each image */
     padding: 10px; /* Add some space around each image */
     box-sizing: border-box;
