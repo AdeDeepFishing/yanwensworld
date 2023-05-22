@@ -440,3 +440,8 @@ h1, h2, h3 {
     text-align: center;
     font-size: 16px; /* Adjust font size as needed */
 }
+
+.artclasses-image-container video {
+    width: 100%; /* Adjust this value as needed */
+    height: auto;
+}
