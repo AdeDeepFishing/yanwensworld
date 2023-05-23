@@ -445,3 +445,20 @@ h1, h2, h3 {
     width: 100%; /* Adjust this value as needed */
     height: auto;
 }
+
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* for 16:9 aspect ratio */
+    height: 0;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
