@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("darkModeToggle").addEventListener("click", function () {
@@ -76,6 +77,27 @@ document.addEventListener("DOMContentLoaded", function () {
             window.history.back();
         }
     }
+
+    //for coding page
+    document.querySelectorAll('.details-button').forEach(button => {
+        button.addEventListener('click', function() {
+            toggleDetails(this);
+        });
+    });
+
+    function toggleDetails(button) {
+        var hiddenDetails = button.nextElementSibling;
+        if (hiddenDetails.classList.contains('hidden')) {
+            hiddenDetails.classList.remove('hidden');
+            button.innerHTML = "Hide Details";
+        } else {
+            hiddenDetails.classList.add('hidden');
+            button.innerHTML = "More Details";
+        }
+    }
+
+     
+
 });
 
 

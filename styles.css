@@ -461,4 +461,72 @@ h1, h2, h3 {
     width: 100%;
     height: 100%;
   }
-  
+
+/* coding page */
+  .coding-project {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    /* Adjust as needed */
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-details {
+    /* Add some padding for nicer layout */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.extra-details {
+    display: none;
+    margin-top: 20px;
+}
+
+.details-button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #ff91a9;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 150px;
+}
+
+.details-button:hover {
+    background-color: #ff686b;
+    color: white;
+}
+
+.code-link {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+body.dark-mode .code-link {
+    color: #ff91a9; 
+    text-decoration: underline;
+}
+
