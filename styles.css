@@ -530,3 +530,22 @@ body.dark-mode .code-link {
     text-decoration: underline;
 }
 
+/* back to top button */
+#back-to-top-btn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 40px; /* Place the button at the bottom of the page */
+    right: 40px; /* Place the button 20px from the right */
+    z-index: 99; /* May not be necessary, but just in case */
+    border: none; /* No border */
+    outline: none; /* Remove outline */
+    background-color: #ff91a9; /* Pink background */
+    color: white; /* White text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 4px; /* Rounded corners */
+}
+
+#back-to-top-btn:hover {
+    background-color: #ff686b; /* Add a darker background on hover */
+}
