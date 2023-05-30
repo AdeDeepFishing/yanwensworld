@@ -282,15 +282,13 @@ header {
 }
 
 .footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     background-color: #f8f9fa;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* justify-content: flex-end; */
-    /* padding: 1rem; */
     padding: 20px;
 }
 
@@ -411,11 +409,12 @@ h1, h2, h3 {
 }
 
 .container {
-    max-width: 1200px; /* adjust this value to set the maximum width of your content */
+    max-width: 1200px; 
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20px; /* add some padding to avoid content sticking to the edges */
+    padding-left: 20px; 
     padding-right: 20px;
+    margin-bottom: 20px;
 }
 
 /* artworks->classes or projects page */
@@ -535,20 +534,21 @@ body.dark-mode .code-link {
 
 /* back to top button */
 #back-to-top-btn {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 40px; /* Place the button at the bottom of the page */
-    right: 40px; /* Place the button 20px from the right */
-    z-index: 99; /* May not be necessary, but just in case */
-    border: none; /* No border */
-    outline: none; /* Remove outline */
-    background-color: #ff91a9; /* Pink background */
-    color: white; /* White text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 4px; /* Rounded corners */
-}
-
+    display: none;
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #ff91a9;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
 #back-to-top-btn:hover {
-    background-color: #ff686b; /* Add a darker background on hover */
+    background-color: #ff686b;
 }
+  
