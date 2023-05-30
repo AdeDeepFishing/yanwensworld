@@ -454,7 +454,7 @@ h1, h2, h3 {
     height: 0;
   }
   
-  .video-container iframe {
+.video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -463,11 +463,12 @@ h1, h2, h3 {
   }
 
 /* coding page */
-  .coding-project {
-    display: grid;
+.coding-project {
+    display: flex;
     grid-template-columns: 4fr 6fr;
+    /* align-items: center; */
     gap: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .image-container {
@@ -475,6 +476,7 @@ h1, h2, h3 {
     width: 100%;
     height: auto;
     overflow: visible;
+    flex: 1;
 }
 
 .image-container img {
@@ -487,6 +489,7 @@ h1, h2, h3 {
     /* Add some padding for nicer layout */
     padding: 20px;
     box-sizing: border-box;
+    flex: 1;
 }
 
 .extra-details {
