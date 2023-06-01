@@ -22,7 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.querySelectorAll('.homepage-image-container').forEach(element => {
         element.addEventListener('click', () => {
-            const targetId = element.querySelector('.text').textContent === "Artworks" ? "artworks" : "coding";
+            // const targetId = element.querySelector('.text').textContent === "Artworks" ? "artworks" : "coding";
+            const targetId = element.getAttribute('data-page');
             window.location.hash = `#${targetId}`;
         });
     });

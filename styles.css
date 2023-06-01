@@ -118,6 +118,29 @@ body.dark-mode .footer-icons a:hover {
     font-size: 2rem;
 }
 
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 0;  
+}
+
+.personal-image {
+    flex: 0 0 35%;  
+    padding-right: 20px;  
+    margin-top: 20px;
+}
+
+.personal-image img {
+    width: 100%;
+    height: auto;
+}
+
+.about-section {
+    flex: 0 0 60%;  
+}
+
+
 /* Artworks page styles */
 .projects-grid, .classes-grid {
     max-width: 100%;
@@ -528,6 +551,11 @@ h1, h2, h3 {
 }
 
 body.dark-mode .code-link {
+    color: #ff91a9; 
+    text-decoration: underline;
+}
+
+body.dark-mode .home-link {
     color: #ff91a9; 
     text-decoration: underline;
 }

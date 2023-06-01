@@ -27,7 +27,7 @@
     <!-- Navigation bar -->
     <nav id="navbar">
         <a href="#home" data-target="home" aria-label="Home">Home</a>
-        <a href="#about" data-target="about" aria-label="About">About</a>
+        <!-- <a href="#about" data-target="about" aria-label="About">About</a> -->
         <a href="#artworks" data-target="artworks" aria-label="Artworks">Artworks</a>
         <a href="#coding" data-target="coding" aria-label="Coding">Coding</a>
         <a href="#contact" data-target="contact" aria-label="Contact">Contact</a>
@@ -38,50 +38,58 @@
     <div class="container">
         <!-- Home page -->
         <div class="page" id="home">
-            <div class="page-content home-page-content">
-                <div class="homepage-image-container left">
+            <div class="about-content">
+                <div class="personal-image">
+                    <img src="images/myImage.JPG" alt="Your name">
+                </div>
+                <div class="about-section">
+                    <h2 class="about-section-title">Hello! My name is Yanwen ( ´ ▽ ` )ﾉ</h2>
+                    <p>I'm a passionate artist and coder. Welcome to my world, where I share my creative journey through art and coding projects. I believe in the power of imagination and enjoy exploring the intersection of these two disciplines.</p>
+
+                    <h2 class="about-section-title">Background & Education</h2>
+                    <p>I'm currently studying at the University of California, Santa Barbara, majoring in Fine Art and Applied Mathematics. I've always been fascinated by the blend of creativity and technology, which led me to pursue my interests in both art and coding.</p>
+
+                    <h2 class="about-section-title">Artworks 👩🏻‍🎨</h2>
+                    <p>From a young age, I've been passionate about creating art. However, during my middle school years, I had to put my artistic pursuits on hold as I was required to focus on academic work. Fortunately, I was able to rediscover my love for art in college and pursue it as my second major, reigniting my artistic dreams. I've experimented with various mediums and styles, such as drawing and digital art. At times, my artwork is inspired by social events, which have made me realize the importance of contributing to women's rights and human rights. I love exploring new techniques and pushing the boundaries of my creativity, as I continue to grow as an artist.</p>
+
+                    <h2 class="about-section-title">Coding Projects 👩🏻‍💻</h2>
+                    <p>In addition to my passion for art, I'm also an avid coder. I've worked on numerous projects spanning from web development to iOS, and I'm always eager to learn new programming languages and technologies. My coding projects showcase my problem-solving skills and allow me to bring my artistic vision to life through technology.</p>
+
+                    <h2 class="about-section-title">Personal Interests</h2>
+                    <p>Beyond my academic and creative pursuits, I enjoy hiking, eating, and traveling. These activities not only enrich my life but also often provide inspiration for my projects. By engaging with the world around me and experiencing new adventures, I continue to grow both personally and professionally.</p>
+
+                    <h2 class="about-section-title">Let's Connect 🥳</h2>
+                    <p>If you'd like to learn more about my work or collaborate on a project, feel free to reach out through the <a href="#contact" class="home-link">Contact</a> page. I'm always open to new ideas and opportunities.</p>
+                </div>
+            </div>    
+
+            <div class="page-content home-page-content">    
+                <div class="homepage-image-container left" data-page="artworks">
                     <img src="images/homePageDrawingImage.png" alt="Artworks" class="homepage-image">
                     <div class="overlay">
-                        <div class="text">Artworks</div>
+                        <div class="text">
+                            Artworks 👩🏻‍🎨 :
+                            <p>Click the image to dive into my creative world!</p>
+                        </div>
                     </div>
                 </div>
-                <div class="homepage-image-container right">
+                <div class="homepage-image-container right" data-page="coding">
                     <img src="images/homePageCodingImage.png" alt="Codings" class="homepage-image">
                     <div class="overlay">
-                        <div class="text">Coding Projects</div>
+                        <div class="text">
+                            Coding Projects 👩🏻‍💻 :
+                            <p>Click the image to explore my coding project!</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <!-- About page -->
+        <!-- About page
         <div class="about-container">
             <div id="about" class="page">
-                <!-- Introduction -->
-                <h2 class="about-section-title">Introduction</h2>
-                <p>Hello! My name is Yanwen, and I'm a passionate artist and coder. Welcome to my world, where I share my creative journey through art and coding projects. I believe in the power of imagination and enjoy exploring the intersection of these two disciplines.</p>
-
-                <!-- Background and Education -->
-                <h2 class="about-section-title">Background and Education</h2>
-                <p>I'm currently studying at the University of California, Santa Barbara, majoring in Fine Art and Applied Mathematics. I've always been fascinated by the blend of creativity and technology, which led me to pursue my interests in both art and coding.</p>
-
-                <!-- Artworks -->
-                <h2 class="about-section-title">Artworks</h2>
-                <p>From a young age, I've been passionate about creating art. However, during my middle school years, I had to put my artistic pursuits on hold as I was required to focus on academic work. Fortunately, I was able to rediscover my love for art in college and pursue it as my second major, reigniting my artistic dreams. I've experimented with various mediums and styles, such as drawing and digital art. At times, my artwork is inspired by social events, which have made me realize the importance of contributing to women's rights and human rights. I love exploring new techniques and pushing the boundaries of my creativity, as I continue to grow as an artist.</p>
-
-                <!-- Coding Projects -->
-                <h2 class="about-section-title">Coding Projects</h2>
-                <p>In addition to my passion for art, I'm also an avid coder. I've worked on numerous projects spanning from web development to iOS, and I'm always eager to learn new programming languages and technologies. My coding projects showcase my problem-solving skills and allow me to bring my artistic vision to life through technology.</p>
-
-                <!-- Personal Interests -->
-                <h2 class="about-section-title">Personal Interests</h2>
-                <p>Beyond my academic and creative pursuits, I enjoy hiking, eating, and traveling. These activities not only enrich my life but also often provide inspiration for my projects. By engaging with the world around me and experiencing new adventures, I continue to grow both personally and professionally.</p>
-
-                <!-- Call to Action (optional) -->
-                <h2 class="about-section-title">Let's Connect!</h2>
-                <p>If you'd like to learn more about my work or collaborate on a project, feel free to reach out through the <a href="#contact">Contact</a> page. I'm always open to new ideas and opportunities.</p>
-            </div>
-        </div>
+                            </div>
+        </div> -->
 
 
         <!-- Artworks page -->
