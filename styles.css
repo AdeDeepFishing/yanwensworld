@@ -5,11 +5,9 @@
 }
 
 body {
-    /* position: relative; */
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto minmax(0,1fr) auto;
     min-height: 100vh;
-    padding-bottom: 80px; 
     font-family: Arial, sans-serif;
     background-color: #fff;
     color: #333;
@@ -54,31 +52,6 @@ body {
     color: #ff91a9;
 }
 
-body.dark-mode {
-    background-color: #333;
-    color: #fff;
-}
-
-body.dark-mode #navbar, body.dark-mode #header {
-    background-color: #444;
-}
-
-body.dark-mode p {
-    color: #ccc;
-}
-
-body.dark-mode .info-block i,
-body.dark-mode .info-block a {
-    color: #ccc;
-}
-
-body.dark-mode .footer-icons a {
-    color: #ccc;
-}
-
-body.dark-mode .footer-icons a:hover {
-    color: #ddd;
-}
 
 /* Home page styles */
 .page {
@@ -107,13 +80,16 @@ body.dark-mode .footer-icons a:hover {
     left: 0;
     right: 0;
     bottom: 0;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.4);
-    opacity: 1;
-    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
+
 
 .category:hover .overlay {
     opacity: 1;
@@ -218,14 +194,6 @@ body.dark-mode .footer-icons a:hover {
     color: white;
 }
 
-body.dark-mode .back-button {
-    background: linear-gradient(to right, #414345 0%, #232526 100%);
-}
-
-body.dark-mode .back-button:hover {
-    background: linear-gradient(to right, #232526 0%, #414345 100%);
-    color: white;
-}
 
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
@@ -310,60 +278,12 @@ header {
     color: #fb6183;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    height: 80px;
-    width: 100%;
-    background-color: #f8f9fa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    margin-top: auto;
-}
-
-.footer-icons {
-    display: flex;
-    justify-content: flex-end; /* Align the icons to the right */
-    width: 100%; /* Add width to occupy the full width of the footer */
-}
 
 
-.footer-icons a {
-    color: #ff69b4;
-    text-decoration: none;
-    margin-left: 1rem;
-    font-size: 1.5rem;
-}
 
-.footer-icons a:hover {
-    color: #ff8dc3;
-}
 
-.homepage-image-container {
-    position: relative;
-    width: 50%;
-    display: inline-block;
-    vertical-align: top;
-}
 
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: 0.5s ease;
-    background-color: rgba(0, 0, 0, 0.5);
-}
 
-.homepage-image-container:hover .overlay {
-    opacity: 1;
-}
 
 .text {
     color: white;
@@ -392,7 +312,14 @@ header {
 
 .homepage-image-container {
     position: relative;
-    width: calc(50% - 10px);
+    width: (50%-10px);
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 100px;
+}
+
+.homepage-image-container:hover .overlay {
+    opacity: 1;
 }
 
 .homepage-image-container.left {
@@ -446,6 +373,8 @@ h1, h2, h3 {
     padding-left: 20px; 
     padding-right: 20px;
     margin-bottom: 20px;
+    flex:1;
+    min-height: 0;
 }
 
 /* artworks->classes or projects page */
@@ -558,15 +487,6 @@ h1, h2, h3 {
     display: none;
 }
 
-body.dark-mode .code-link {
-    color: #ff91a9; 
-    text-decoration: underline;
-}
-
-body.dark-mode .home-link {
-    color: #ff91a9; 
-    text-decoration: underline;
-}
 
 /* back to top button */
 #back-to-top-btn {
@@ -588,6 +508,80 @@ body.dark-mode .home-link {
     background-color: #ff686b;
 }
 
-.home .footer {
-    display: none;
+.footer {
+    height: 80px;
+    width: 100%;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
+
+.footer-icons {
+    display: flex;
+    justify-content: flex-end; /* Align the icons to the right */
+    width: 100%; /* Add width to occupy the full width of the footer */
+    padding-right: 20px; /* Add some spacing to the right */
+}
+
+
+
+.footer-icons a {
+    color: #ff69b4;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+
+.footer-icons a:hover {
+    color: #ff8dc3;
+}
+
+/* dark mode */
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode #navbar, 
+.dark-mode #header {
+    background-color: #444;
+}
+
+.dark-mode p {
+    color: #ccc;
+}
+
+.dark-mode .info-block i,
+.dark-mode .info-block a {
+    color: #ccc;
+}
+
+.dark-mode .footer-icons a {
+    color: #ccc;
+}
+
+.dark-mode .footer-icons a:hover {
+    color: #ddd;
+}
+
+.dark-mode .back-button {
+    background: linear-gradient(to right, #414345 0%, #232526 100%);
+}
+
+.dark-mode .back-button:hover {
+    background: linear-gradient(to right, #232526 0%, #414345 100%);
+    color: white;
+}
+
+.dark-mode .code-link {
+    color: #ff91a9; 
+    text-decoration: underline;
+}
+
+.dark-mode .home-link {
+    color: #ff91a9; 
+    text-decoration: underline;
+}
+
