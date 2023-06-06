@@ -129,7 +129,7 @@ body {
     max-width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Default to 2 columns (400px min width) */
+    grid-template-columns: repeat(1,1fr); /* 1 column for small screens */
     grid-gap: 1rem;
     padding: 1rem;
 }
@@ -163,9 +163,15 @@ body {
     font-size: 24px;
 }
 
-@media screen and (min-width: 768px) { /* Adjust breakpoint as needed */
+@media screen and (min-width: 480px) { /* Adjust this breakpoint as needed */
     .classes-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Switch to 3 columns (300px min width) */
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+}
+
+@media screen and (min-width: 768px) { /* Adjust this breakpoint as needed */
+    .classes-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
     }
 }
 
