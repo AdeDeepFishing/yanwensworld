@@ -852,7 +852,7 @@ h1, h2, h3 {
 	max-width: 480px;
 	max-height: 360px;
 	width: 48%;
-	background: #3085a3;
+	background: #ffced9;
 	text-align: center;
 	cursor: pointer;
 }
@@ -928,7 +928,7 @@ figure.effect-zoe figcaption {
 	bottom: 0;
 	padding: 1em;
 	height: 3.75em;
-	background: #fff;
+	background: #ff91a9;
 	color: #3c4a50;
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
@@ -938,6 +938,7 @@ figure.effect-zoe figcaption {
 
 figure.effect-zoe h2 {
 	float: left;
+    color: #ffffff;
 }
 
 figure.effect-zoe p.icon-links a {
@@ -1230,3 +1231,5 @@ body #cda-remove {
 .artist-statement{
     padding-top: 20;
 }
+
+
