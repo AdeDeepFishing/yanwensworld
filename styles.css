@@ -2122,3 +2122,10 @@ body #cda-remove {
     padding-top: 20;
 }
 
+
+
+#mindfulblooms, #coding, #whatIStoleFromMuseums, #floweronsilk, #indigodye, #selfportrait, #pinkToWhite, #pandaslife, #bloodybrides, #asilentroom, #yifei, #photograph {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 20px; 
+}
