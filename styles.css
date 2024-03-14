@@ -1225,7 +1225,6 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-    /* Adjust the artworks section title font size */
     .artworks-section-title {
         font-size: 1.2rem;  /* Adjust the font size for mobile screens */
         margin-top: 20px;  /* Add some space above the title */
@@ -1738,9 +1737,12 @@ h1, h2, h3 {
 	float: left;
 	overflow: hidden;
 	margin: 10px 1%;
-	min-width: 320px;
+	/* min-width: 320px;
 	max-width: 480px;
-	max-height: 360px;
+    min-height: 240px;
+	max-height: 360px; */
+    width:480px;
+    height:360px;
 	width: 48%;
 	background: #ffced9;
 	text-align: center;
